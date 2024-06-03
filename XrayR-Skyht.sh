@@ -170,7 +170,7 @@ cat >>config.yml<<EOF
   - PanelType: "V2board" # Panel type:  NewV2board, V2board
     ApiConfig:
       ApiHost: "https://my.punpn.net"
-      ApiKey: "bgfhtrhtrejytrjyuthtrwgrewvfedswhtrehjtrwegrtewgrew"
+      ApiKey: "hhai_hhai_hhai_hhai"
       NodeID: $node_id
       NodeType: $NodeType # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
@@ -243,7 +243,7 @@ EOF
  }
 
 case "${num}" in
-1) bash <(curl -Ls https://my.punpn.net/xRayRvsdagvsagvdsavccsacsadsa/install.sh)
+1) bash <(curl -Ls https://raw.githubusercontent.com/leowdzai/xrayr-sever/main/install.sh)
 openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/vpndata.crt -keyout /etc/XrayR/vpndata.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
 cd /etc/XrayR
   cat >config.yml <<EOF
