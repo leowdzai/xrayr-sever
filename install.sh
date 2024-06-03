@@ -110,14 +110,14 @@ install_XrayR() {
 
     # url="https://4gsieure.net/xrayr/XrayR-linux-64.zip"
     # wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
-    curl -o XrayR-linux.zip https://my.punpn.net/xRayRvsdagvsagvdsavccsacsadsa/XrayR-linux-64.zip
+    curl -o XrayR-linux.zip https://github.com/leowdzai/xrayr-sever/blob/main/XrayR-linux-64.zip
 
     unzip XrayR-linux.zip
     rm XrayR-linux.zip -f
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://my.punpn.net/xRayRvsdagvsagvdsavccsacsadsa/XrayR.service"
+    file="https://github.com/leowdzai/xrayr-sever/blob/main/XrayR.service"
     wget -q -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     # cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -157,7 +157,7 @@ install_XrayR() {
     if [[ ! -f /etc/XrayR/rulelist ]]; then
         cp rulelist /etc/XrayR/
     fi
-    curl -o /usr/bin/XrayR -Ls https://my.punpn.net/xRayRvsdagvsagvdsavccsacsadsa/XrayR1.sh
+    curl -o /usr/bin/XrayR -Ls https://github.com/leowdzai/xrayr-sever/blob/main/XrayR1.sh
     # cp -f XrayR.sh /usr/bin/XrayR
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
